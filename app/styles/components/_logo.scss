@@ -1,0 +1,25 @@
+a.Logo {
+	display: block;
+	margin: 2em 0;
+
+	@media (min-width: 656px) {
+		margin: 3.5em 0 2em;
+	}
+
+	h1 {
+		margin-bottom: 0.1em;
+	}
+
+	h3 {
+		@extend %font-medium;
+		margin-bottom: 0;
+	}
+	span {
+		transition: color 0.2s $easing;
+	}
+	&:hover {
+		span {
+			color: $yellow;
+		}
+	}
+}

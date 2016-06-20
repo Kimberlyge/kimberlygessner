@@ -1,0 +1,177 @@
+/**
+ * Navigation
+ */
+
+.Nav,
+.NavFilter {
+	position: relative;
+	padding-bottom: 0;
+
+	@media (max-width: 656px) {
+		padding-top: 0;
+	}
+
+	a {
+		display: block;
+		font-size: $font-14;
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+		text-decoration: none;
+		cursor: pointer;
+		letter-spacing: 0.1em;
+
+		padding: 0.5em 0;
+		margin: 0.5em 0;
+
+		@media (min-width: 656px) {
+			display: inline-block;
+			margin: 0 rem(5);
+			padding: 0;
+
+			&:hover,
+			&:active,
+			&.is-active {
+				color: $yellow;
+			}
+		}
+
+		&:first-of-typev{
+			margin-top: 1.3em;
+		}
+
+		&.js-navToggleRecipes,
+		&.js-navToggleTravel {
+			@extend %font-bold;
+
+			a {
+				@extend %font-medium;
+			}
+		}
+	}
+	> a {
+		padding: $space 0;
+	}
+
+	span {
+		display: none;
+		@media (min-width: 656px) {
+			display: inline-block;
+		}
+	}
+}
+
+
+/* Sub Navigation */
+
+.NavSub {
+	position: absolute;
+	z-index: 10;
+	width: 100%;
+	left: 0;
+	top: rem(62);
+	min-height: 2em; //needs a height to keep it open while moving the cursor
+
+	// pointer-events: none;
+	&.is-hidden {
+		display: none;
+	}
+	@media (max-width: 656px) {
+		display: none !important;
+	}
+}
+
+.NavSub-content {
+	@include flexRow;
+	background-color: $white;
+	border: 2px solid $black;
+	padding: rem($space);
+}
+
+.NavSub-wrap {
+	@include flexCol;
+	justify-content: flex-start;
+	width: 100%;
+
+	h3 {
+		font-size: 12px;
+		margin-bottom: 0;
+	}
+	a {
+		font-size: 12px;
+	}
+}
+
+/* Filter Navigation */
+
+.NavFilter {
+	@include flexRow;
+	background-color: $white;
+	border: 2px solid $yellow;
+	align-items: flex-end;
+	padding: rem(10) rem(10) rem(10) rem($space);
+
+	@media (max-width: 656px) {
+		display: none;
+	}
+
+	a i {
+			margin-left: rem(4);
+			width: rem(16);
+			height: rem(16);
+			vertical-align: middle;
+			margin-top: rem(1);
+	}
+
+	> i {
+		margin-right: rem(15);
+		width: rem(16);
+		height: rem(16);
+	}
+
+	a {
+		padding: 0;
+		background: none;
+		font-size: 12px;
+		text-transform: lowercase;
+	}
+}
+.NavFilter--sticky {
+	display: none;
+	width: 25%;
+	&.is-sticky {
+		@include flexCol;
+		align-items: flex-start;
+		max-width: rem(200);
+
+		position: fixed;
+		top: 0;
+		z-index: 90;
+	}
+}
+.NavFilter--inline {
+	@include flexCol;
+	align-items: flex-start;
+	max-width: rem(200);
+	&.is-sticky {
+		visibility: hidden;
+	}
+}
+
+.NavFilter--left {
+	height: rem(300);
+	padding: rem(10);
+	a {
+		margin: 0;
+	}
+}
+
+// The social nav
+.Social {
+	margin-top: rem($space*2);
+	padding-left: rem($space*2);
+	text-align: left;
+	img {
+		width: rem(30);
+		height: rem(30);
+	}
+}

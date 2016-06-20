@@ -1,0 +1,46 @@
+/*!
+	Kimberly Gessner
+	Structure inspired by Oskar Rough
+*/
+
+/**
+ * Third party
+ If is only *.css available rename it to *.scss
+ */
+// @import 'node_modules/flickity/css/flickity';
+@import 'node_modules/normalize.css/normalize';
+@import 'node_modules/suitcss-base/lib/base';
+
+@import 'base/mixins';
+@import 'base/config';
+
+// Utilities (abstract patterns to be reused in components)
+@import 'utilities/clearfix';
+@import 'utilities/negative-text';
+@import 'utilities/align';
+@import 'utilities/ratio';
+@import 'utilities/flex';
+// @import 'utilities/animation-delay';
+
+// Base
+@import 'base/typography';
+@import 'base/global';
+@import 'base/icons';
+
+// Components
+@import 'components/animation';
+@import 'components/cover';
+@import 'components/buttons';
+@import 'components/box';
+@import 'components/logo';
+@import 'components/burger';
+@import 'components/menu';
+@import 'components/nav';
+@import 'components/teaser';
+
+@import 'layout/header';
+@import 'layout/layout';
+@import 'layout/grid';
+@import 'layout/detail';
+@import 'layout/scrollbar';
+
