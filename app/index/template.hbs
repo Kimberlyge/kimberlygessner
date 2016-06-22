@@ -8,17 +8,18 @@
 				<div class="Teaser-body">
 					<h2 class="Teaser-title Link">{{item.title}}</h2>
 					<ul class="Teaser-categories">
-						{{#each item.categories as |category|}}
+						{{!-- {{#each item.categories as |category|}}
 							{{#link-to "index"}}{{category.name}}{{/link-to}}
-						{{/each}}
+						{{/each}} --}}
+						<p>{{{item.acf.cooperation}}}</p>
 					</ul>
-					<ul class="Teaser-tags">
+					{{!-- <ul class="Teaser-tags">
 						{{#each item.tags as |tag|}}
 							<li>
 								<i class="icon-{{tag.name}}" data-grunticon-embed><span>{{tag.slug}}</span></i>
 							</li>
 						{{/each}}
-					</ul>
+					</ul> --}}
 
 				</div>
 			{{/link-to}}

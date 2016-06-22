@@ -82,14 +82,24 @@ b {
 // Links
 a,
 a:visited {
+	position: relative;
 	color: $black;
 	text-decoration: none;
 	transition: color 150ms;
+}
 
-	&:hover,
-	&:active,
-	&.is-active {
-		// color: $white;
+p a {
+	font-style: italic;
+	&:hover {
+		color: $yellow;
+	}
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: rem(-5);
+		left: 0;
+		width: 100%;
+		border-bottom: 2px solid;
 	}
 }
 

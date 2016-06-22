@@ -93,10 +93,7 @@
 	@include flexRow;
 	flex-wrap: wrap;
 	flex: 4;
-	a {
-		margin-right: rem(6);
-		font-size: $font-14;
-	}
+	margin-bottom: 0;
 }
 .Teaser-tags {
 	@include flexRow;
