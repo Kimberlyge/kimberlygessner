@@ -9,16 +9,16 @@
 	background-image: url('images/device-iphone.svg');
 	background-size: contain;
 	background-repeat: no-repeat;
-	width: 280px;
-	height: 450px;
+	width: rem(286);
+	height: rem(440);
 	iframe {
 		position: absolute;
-		top: 60px;
-		left: 20px;
+		top: rem(53);
+		left: rem(14);
 		margin: auto;
-		// width: 337px;
-		height: 505px;//rem(500);
-		transform: scale(0.64, 0.65);
+		width: 100%;
+		height: rem(512);
+		transform: scale(0.65, 0.65);
 		transform-origin: top left;
 
 			html {
@@ -26,9 +26,28 @@
 			}
 	}
 }
+.Device--tablet {
+	right: 0;
+	background-image: url('images/device-tablet.svg');
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: rem(409);
+	height: rem(280);
+	iframe {
+		position: absolute;
+		top: rem(22);
+		left: rem(41);
+		margin: auto;
+		width: 100%;
+		height: rem(308);
+		transform: scale(0.78, 0.78);
+		transform-origin: top left;
+
+	}
+}
 
 .Detail	{
-	height: 200vh;
+	height: 100vh;
 	position: relative;
 	background: $white;
 
@@ -38,108 +57,19 @@
 	}
 }
 
-/* Intro */
-
-.DetailHead {
-	@include flexRowWrap;
-}
-.DetailHead--reverse {
-	flex-direction: row-reverse;
-}
-
-.DetailHead-body {
-	padding: rem($space);
+.DetailBody {
+	position: fixed;
+	rotate: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	top: 0;
+	max-width: rem(350);
 	margin: auto;
-
-	@media (min-width: $layout-s) {
-		padding: rem($space*2);
-	}
-	h2 {
-		@extend %font-light;
-		letter-spacing: 0.1em;
-		font-size: $font-20;
-
-		@media (min-width: $layout-s) {
-			font-size: rem(30);
-		}
-		@media (min-width: $layout-ml) {
-			font-size: $font-40;
-		}
-	}
-	p {
-		@extend %font-light;
-	}
-}
-.DetailHead-media {
-	img {
-		margin: 0 auto;
-		width: 100%;
-	}
-	&.is-reversed {
-		padding: rem($space*2);
-	}
-}
-
-/* Items */
-
-.DetailItem {
-	margin: 0 auto;
-	min-width: rem(300);
-}
-.DetailItem--text {
-	@extend %font-light;
-	letter-spacing: 0.05em;
-
-	padding: rem(30);
-
-	p:last-of-type {
-		margin-bottom: 0;
-	}
-}
-.DetailItem--small {
-	max-width: rem(380);
-}
-.DetailText-title {
-	width: rem(70);
-	padding-bottom: rem(15);
-	border-bottom: 6px solid;
-}
-
-/* Ingredients */
-
-.DetailInfo {
-	border: 3px solid;
-	padding-bottom: 0;
-
-	h3,
-	ul {
-		margin: 30px;
-
-		p {
-			margin: 0;
-		}
-	}
-	div:empty,
-	p:empty {
-		height: 0.8em;
-	}
-}
-
-.DetailInfo-bottom {
-	border-top: 3px solid $black;
-	padding: rem(10) rem(30);
-	background: $black;
-	p {
-		display: inline-block;
-		margin: 0 10px 0 0;
-		text-transform: lowercase;
-		font-style: italic;
-		color: $white;
-		margin-bottom: 0;
-	}
-	a {
-		color: $white;
-		padding-bottom: rem(3);
-		border-bottom: 2px solid $white;
-	}
+	max-height: rem(300);
+	border: 4px solid;
+	padding: rem($space);
+	text-align: center;
+	z-index: 1;
+	background: $white;
 }

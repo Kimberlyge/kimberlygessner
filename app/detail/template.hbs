@@ -1,8 +1,26 @@
 {{#link-to 'index'}}&lsaquo; back{{/link-to}}
-<div class="Detail">
+
+{{!-- @todo make ember component for pagination --}}
+{{!-- {{#each model as |item|}}
+	{{#link-to 'detail' item class="Teaser-wrap"}}
+		<p>yo</p>
+	{{/link-to}}
+{{/each}}
+ --}}
+
+<div class="Detail" style="background-color: {{model.acf.color}}">
 	{{#scrolling-devices}}
 		<div class="Device Device--mobile">
-			<iframe src="http://marcelwanders.cybex-online.com/" frameborder="0" scrolling="auto"></iframe>
+			<iframe src="{{{model.acf.url}}}" frameborder="0" scrolling="auto"></iframe>
+		</div>
+	{{/scrolling-devices}}
+	<div class="DetailBody">
+		<h2>{{{model.title}}}</h2>
+		<p>{{{model.content}}}</p>
+	</div>
+	{{#scrolling-devices}}
+		<div class="Device Device--tablet">
+			<iframe src="{{{model.acf.url}}}" frameborder="0" scrolling="auto"></iframe>
 		</div>
 	{{/scrolling-devices}}
 
