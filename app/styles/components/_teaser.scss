@@ -21,6 +21,15 @@
 			position: relative;
 		}
 	}
+	a {
+		margin-top: 2em;
+	}
+	a:nth-of-type(2n) {
+		margin-top: -4em;
+	}
+	a:nth-of-type(2) {
+		margin-top: 7.6em;
+	}
 
 }
 .Teaser-wrap {
