@@ -3,7 +3,8 @@ import Ember from 'ember';
 
 export default Ember.Service.extend({
 	onMobile: false,
-	onAbout: false
+	onAbout: false,
+	onIndex: false
 
 	// setInitialWidth: on('init', function () {
 	// 	const xBrowserWidth = document.querySelector('body').getBoundingClientRect().width;

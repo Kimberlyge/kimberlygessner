@@ -76,7 +76,7 @@ $font-70: rem(60);
 }
 
 @mixin text {
-	font-size: $font-14;
+	font-size: 12px;
 	@media (min-width: $layout-m) {
 		font-size: $base-font-size;
 	}

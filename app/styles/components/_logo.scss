@@ -1,9 +1,15 @@
 a.Logo {
-	display: block;
-	margin: 2em 0;
+	position: fixed;
+	left: 0;
+	right: 0;
+	max-width: rem(400);
+	padding: 1em 0;
+	background-color: $white;
 
 	@media (min-width: 656px) {
-		margin: 3.5em 0 2em;
+		padding: 0;
+		background-color: transparent;
+		margin: 3.5em auto 2em;
 	}
 
 	h1 {
@@ -13,6 +19,22 @@ a.Logo {
 	h3 {
 		@extend %font-medium;
 		margin-bottom: 0;
+		background-color: $white;
+		padding: 1em;
+		margin: auto;
+
+		@media (max-width: $layout-m) {
+			line-height: 1.8em;
+		}
+
+		@media (min-width: $layout-m) {
+			padding: rem($space);
+			max-width: rem(350);
+		}
+	}
+	.Link::after {
+		bottom: -2px;
+
 	}
 	span {
 		transition: color 0.2s $easing;

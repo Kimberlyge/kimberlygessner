@@ -24,3 +24,17 @@
 button {
 	color: $black;
 }
+
+.Button--back {
+	position: fixed;
+	z-index: 2;
+	bottom: rem(10);
+	left: rem(10);
+
+
+	@media (min-width: $layout-m) {
+		left: rem($space);
+		top: rem(15);
+		bottom: inherit;
+	}
+}
