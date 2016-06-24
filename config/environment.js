@@ -3,7 +3,7 @@
 module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'kimberlygessner',
-    wordpressHost: 'http://dev-kimberly-gessner.pantheonsite.io',
+    wordpressHost: 'http://kimberlygessner.com',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
