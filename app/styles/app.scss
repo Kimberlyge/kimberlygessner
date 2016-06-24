@@ -20,6 +20,7 @@
 @import 'utilities/align';
 @import 'utilities/ratio';
 @import 'utilities/flex';
+@import 'utilities/position';
 // @import 'utilities/animation-delay';
 
 // Base
@@ -38,7 +39,9 @@
 
 @import 'layout/header';
 @import 'layout/layout';
+@import 'layout/about';
 @import 'layout/grid';
 @import 'layout/detail';
+@import 'layout/devices';
 @import 'layout/scrollbar';
 

@@ -3,13 +3,21 @@
  */
 
 // Fade in images
-.Teaser-media img,
-.Cover-media img,
-.DetailHead-media img  {
-	transition: opacity 1s $easing;
+.Device,
+.About,
+.DetailBody,
+.Teaser-wrap {
+	transition: opacity 1.5s $easing;
 	opacity: 0;
 	&.lazyloaded {
-		transition: opacity 1s $easing;
+		transition: opacity 1.5s $easing;
 		opacity: 1;
+	}
+}
+
+.Device {
+	transition-delay: 1.5s;
+	&.lazyloaded {
+		transition-delay: 1.5s;
 	}
 }

@@ -9,9 +9,10 @@ html {
 	> .liquid-container,
 	> .liquid-container > .liquid-child {
 		min-height: 100%;
+		height: 100vh;
+		overflow-y: auto;
 	}
 }
-
 .Section {
 	padding: 2em 0;
 }

@@ -1,0 +1,28 @@
+/**
+ * About
+ */
+
+.About {
+	padding: rem(110) rem(20);
+	@media (min-width: $layout-m) {
+		@include allCentered;
+		padding: rem(60) rem($space);
+	}
+}
+
+.AboutNav {
+	position: fixed;
+	bottom: rem($space);
+	left: 0;
+	right: 0;
+	text-align: center;
+
+	a {
+		margin: 0 rem(5);
+		transition: opacity 0.2s $easing;
+
+		&:hover {
+			opacity: 0.15;
+		}
+	}
+}
