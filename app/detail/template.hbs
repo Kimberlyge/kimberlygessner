@@ -3,16 +3,16 @@
 <div class="Detail Detail--{{{model.slug}}}" style="background-color: {{model.acf.color}}">
 	<div class="Detail-wrap">
 		{{#scrolling-devices}}
-			<div class="Device Device--mobile">
+			<div class="Device Device--mobile lazyload">
 				<iframe src="{{{model.acf.url}}}" frameborder="0" scrolling="auto"></iframe>
 			</div>
 		{{/scrolling-devices}}
-		<div class="DetailBody">
+		<div class="DetailBody lazyload">
 			<h2>{{{model.title}}}</h2>
 			<p>{{{model.content}}}</p>
 		</div>
 		{{#scrolling-devices}}
-			<div class="Device Device--tablet">
+			<div class="Device Device--tablet lazyload">
 				<iframe src="{{{model.acf.url}}}" frameborder="0" scrolling="auto"></iframe>
 			</div>
 		{{/scrolling-devices}}

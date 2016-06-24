@@ -2,62 +2,6 @@
  * Detail
  */
 
-.Device {
-	display: none;
-	@media (min-width: $layout-m) {
-		display: block;
-		position: absolute;
-	}
-}
-.Device--mobile {
-	background-image: url('images/device-iphone.svg');
-	background-size: contain;
-	background-repeat: no-repeat;
-	width: rem(286);
-	height: rem(440);
-
-	left: 3em;
-	top: -2em;
-	bottom: 0;
-	margin : auto;
-	transform: rotate(-2deg);
-
-	iframe {
-		position: absolute;
-		top: rem(54);
-		left: rem(14);
-		margin: auto;
-		width: 100%;
-		height: rem(508);
-		transform: scale(0.65, 0.65);
-		transform-origin: top left;
-	}
-}
-.Device--tablet {
-	right: 0;
-	background-image: url('images/device-tablet.svg');
-	background-size: contain;
-	background-repeat: no-repeat;
-	width: rem(409);
-	height: rem(280);
-	top: rem(80);
-	right: rem(-108);
-
-
-	transform: rotate(2deg);
-	iframe {
-		position: absolute;
-		top: rem(22);
-		left: rem(41);
-		margin: auto;
-		width: 100%;
-		height: rem(308);
-		transform: scale(0.78, 0.78);
-		transform-origin: top left;
-
-	}
-}
-
 .Detail	{
 	height: 100vh;
 	position: relative;
@@ -71,11 +15,9 @@
 	margin: auto;
 }
 .DetailBody {
+	@include allCentered;
 	position: fixed;
 	rotate: 0;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%, -50%);
 
 	width: 80%;
 	margin: auto;

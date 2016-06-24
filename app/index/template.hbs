@@ -1,7 +1,7 @@
 <div class="Index">
 	<div class="Teaser Container">
 		{{#each model as |item|}}
-			{{#link-to 'detail' item class="Teaser-wrap"}}
+			{{#link-to 'detail' item class="Teaser-wrap lazyload"}}
 				<figure class="Teaser-media">
 					<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="lazyload" alt="" data-srcset="{{item.acf.thumbnail.sizes.medium}} 320w, {{item.acf.thumbnail.sizes.medium_large}} 1000w">
 				</figure>

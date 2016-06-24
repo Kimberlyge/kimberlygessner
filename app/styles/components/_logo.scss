@@ -2,11 +2,12 @@ a.Logo {
 	position: fixed;
 	left: 0;
 	right: 0;
-	max-width: rem(400);
+	width: 100%;
 	padding: 1em 0;
 	background-color: $white;
 
 	@media (min-width: 656px) {
+		max-width: rem(400);
 		padding: 0;
 		background-color: transparent;
 		margin: 3.5em auto 2em;
