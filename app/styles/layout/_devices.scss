@@ -2,12 +2,34 @@
  * Devices
  */
 
+.parallaxParent {
+	height: 100vh;
+	overflow: hidden;
+}
+
+.parallaxParent > * {
+  height: 200%;
+  position: relative;
+  top: -100%;
+}
+
+.Detail-wrap {
+	height: 100vh !important;
+	overflow: hidden  !important;
+	& > .Device {
+		height: 200%;
+		position: relative;
+		top: -100%;
+	}
+}
 .Device {
 	display: none;
+
 	@media (min-width: $layout-m) {
 		display: block;
 		position: absolute;
 	}
+
 }
 .Device--mobile {
 	background-image: url('images/device-iphone.svg');
@@ -52,7 +74,7 @@
 		margin: auto;
 		width: 100%;
 		height: rem(308);
-		transform: scale(0.78, 0.78);
+		transform: scale(0.755, 0.78);
 		transform-origin: top left;
 
 	}

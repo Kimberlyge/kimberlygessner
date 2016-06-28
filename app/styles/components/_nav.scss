@@ -18,7 +18,7 @@
 		display: inline-block;
 		width: rem(6);
 		height: rem(6);;
-		background-color: rgba($black, 0.15);
+		background-color: rgba($white, 0.15);
 		border-radius: 50%;
 		transition: background-color 0.4s ease-in-out;
 	}
@@ -32,7 +32,7 @@
 	a.is-active,
 	a:hover {
 		span::after {
-			background-color: $black;
+			background-color: $white;
 		}
 	}
 
