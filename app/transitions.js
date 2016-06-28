@@ -5,13 +5,22 @@ export default function () {
 		easing: [0.860, 0.000, 0.070, 1.000]
 	});
 
+	// to detail page
 	this.transition(
 		this.toRoute('detail'),
 		this.use('toLeft'),
 		this.reverse('toRight')
 	);
 
-	//@todo
+	//between detail pages
+	this.transition(
+		this.fromRoute('detail/'),
+		this.toRoute('detail/'),
+		this.use('toUp'),
+		this.reverse('toDown')
+	);
+
+	// to about page
 	this.transition(
 		this.toRoute('about'),
 		this.use('toRight'),
