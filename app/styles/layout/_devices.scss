@@ -13,10 +13,10 @@
   top: -100%;
 }
 
-.Detail-wrap {
+.Detail {
 	height: 100vh !important;
 	overflow: hidden  !important;
-	& > .Device {
+	.Device--mobile {
 		height: 200%;
 		position: relative;
 		top: -100%;

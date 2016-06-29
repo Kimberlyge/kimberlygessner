@@ -11,18 +11,13 @@ const {$} = Ember;
 export default Ember.Controller.extend({
 
 	init() {
-		// console.log('init');
-		// $(() => {
-		// 	$('.Device').fadeIn(500);
-		// });
-
 		// init controller
-		const pipe = $('.Detail');
+		const elem = $('.Detail');
 		var controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: 0, duration: "200%"}});
 
 		// build scenes
-		new ScrollMagic.Scene({triggerElement: pipe})
-			.setTween(".Detail-wrap", {y: "80%", ease: Linear.easeNone})
+		new ScrollMagic.Scene({triggerElement: elem})
+			.setTween(".Detail-wrap > div", {y: "80%", ease: Linear.easeNone})
 			.addIndicators()
 			.addTo(controller);
 	}
