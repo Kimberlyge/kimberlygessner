@@ -12,6 +12,13 @@ html {
 		height: 100vh;
 		overflow-y: auto;
 	}
+	&.on-detail {
+		> .liquid-container,
+		> .liquid-container > .liquid-child {
+			// overflow: hidden;
+		}
+
+	}
 }
 .Section {
 	padding: 2em 0;

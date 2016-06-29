@@ -6,7 +6,7 @@
 		{{/link-to}}
 	{{/each}}
 </div>
-<main class="App-main">
+<main class="App-main {{if layout.onDetail 'on-detail'}}">
 	{{!-- don't move the outlet without changing liquid.scss --}}
 	{{liquid-outlet}}
 </main>

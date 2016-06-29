@@ -1,7 +1,7 @@
 {{#link-to 'index' class="Button--back"}}&lsaquo; back{{/link-to}}
 
 <div class="Detail Detail--{{{model.slug}}}" style="background-color: {{model.acf.color}}">
-	<div class="Detail-wrap">
+	<div class="Detail-wrap parallax-window" data-parallax="scroll" data-image-src="/assets/images/donut.jpg">
 		{{#scrolling-devices}}
 			<div class="Device Device--mobile lazyload">
 				<iframe src="{{{model.acf.url}}}" frameborder="0" scrolling="auto"></iframe>
