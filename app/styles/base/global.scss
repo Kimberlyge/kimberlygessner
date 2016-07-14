@@ -28,9 +28,13 @@ html {
 	height: 100%;
 	margin: 0px;
 	padding: 0px;
-	overflow-x: hidden;
+	// overflow-x: hidden;
 }
+body {
+	scroll-behavior: smooth;
+    overflow-y: scroll;
 
+}
 // Set a consistent margin between elements
 h1,
 h2,
