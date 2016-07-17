@@ -26,9 +26,9 @@ gulp.task('icons', function () {
 	});
 	const grunticon = new Grunticon(files, outputDir, options);
 
-	// grunticon.process(function () {
-	// 	deferred.resolve();
+	grunticon.process(function () {
+		deferred.resolve();
 	});
 
-	// return deferred.promise;
+	return deferred.promise;
 });

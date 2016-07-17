@@ -4,8 +4,10 @@
 
 .About {
 	padding: rem(110) rem(20);
+	@include allCentered;
+	text-align: center;
+
 	@media (min-width: $layout-m) {
-		@include allCentered;
 		padding: rem(60) rem($space);
 	}
 }

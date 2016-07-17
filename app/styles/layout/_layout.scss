@@ -20,22 +20,35 @@ html {
 
 	}
 }
+
+.Index {
+	// hide scrollbar hack
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
 .Section {
 	padding: 2em 0;
 }
+
 .is-hidden {
 	display: none;
 }
+
 .centered {
 	text-align: center;
 }
+
 .mobileOnly {
 	@media (min-width: 656px) {
 		display: none !important;
 	}
 }
+
 .desktopOnly {
-	@media (max-width: 656px) {
-		display: none !important;
+	display: none !important;
+	@media (min-width: 656px) {
+		display: block !important;
 	}
 }
