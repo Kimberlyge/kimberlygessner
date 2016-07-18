@@ -101,14 +101,6 @@
 	margin: 0;
 	background-color: $white;
 
-	@media (min-width: 656px) {
-		@include flexCol;
-		flex-wrap: wrap;
-	}
-	@media (min-width: $layout-m) {
-		@include flexRow;
-	}
-
 	img {
 		width: 14px;
 		float: left;
@@ -122,7 +114,6 @@
 	position: relative;
 	text-transform: uppercase;
 	margin-top: 0;
-	flex: 1 100%;
 	font-size: $font-15;
 
 	@media (min-width: $layout-ml) {

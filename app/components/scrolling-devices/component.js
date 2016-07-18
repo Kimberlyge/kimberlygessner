@@ -1,7 +1,7 @@
 /* global TimelineMax, TweenMax, Linear, Bounce */
 // import ScrollMagic from 'npm:scrollmagic';
 // import gsap from 'npm:gsap';
-import Parallax from 'npm:parallax.js';
+// import Parallax from 'npm:parallax.js';
 import Ember from 'ember';
 
 const {Component, $, on} = Ember;
