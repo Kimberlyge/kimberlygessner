@@ -13,10 +13,11 @@
 	justify-content: space-around;
 	padding: 0 rem($space);
 	padding-top: 9.5em;
+
 	// visualy hide scrollbar
-	margin-right: -13px;
-	height: 100%;
-	overflow-y: scroll;
+	// margin-right: -13px;
+	// height: 100%;
+	// overflow-y: scroll;
 
 	a:hover,
 	a:active {
@@ -49,30 +50,6 @@
 	@media (min-width: $layout-m) {
 		padding-top: 14em;
 	}
-	// @media (min-width: 500px) {
-	// 	margin-top: 0;
-	// 	a:first-of-type {
-	// 		margin-top: 0;
-	// 	}
-	// }
-	// @media (min-width: $layout-m) {
-	// 	a:first-of-type {
-	// 		margin-top: rem(18);
-	// 	}
-	// 	a {
-	// 		margin-top: rem(18);
-	// 	}
-	// 	// a:first-of-type,
-	// 	a:nth-of-type(4),
-	// 	a:nth-of-type(6),
-	// 	a:nth-of-type(7),
-	// 	a:nth-of-type(9) {
-	// 		margin-top: rem(-60);
-	// 	}
-	// 	a:nth-of-type(2) {
-	// 		margin-top: 7.6em;
-	// 	}
-	// }
 }
 .Teaser-wrap {
 	position: relative;
@@ -102,14 +79,29 @@
 			// opacity: 1;
 		}
 	}
+
+	.Link::after {
+		transition: all 0.2s ease-in-out !important;
+	}
+	&:hover {
+		.Link {
+			&::after {
+				width: rem(100);
+			}
+		}
+	}
 }
 
-.Teaser-wrap--last {
-	height: rem(335);
+a.Teaser-wrap--last {
 	border: 2px solid $black;
 	padding: rem(15);
 
 	position: relative;
+
+	span {
+		opacity: 0;
+		border: 2px solid $black;
+	}
 
 	> div {
 		position: absolute;
@@ -122,7 +114,9 @@
 	margin-bottom: 0;
 	overflow: hidden;
 
-	img {
+	> * {
+		width: 100%;
+		height: rem(250);
 		// -webkit-transition: -webkit-filter 1600ms $easing;
 		transition: opacity 150ms $easing;
 		@include ratio-inner;
