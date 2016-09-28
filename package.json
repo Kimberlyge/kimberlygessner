@@ -59,7 +59,6 @@
     "imagesloaded": "^4.1.0",
     "lazysizes": "^1.4.0",
     "liquid-fire": "0.23.0",
-    "parallax.js": "^0.1.0",
     "scrollmagic": "^2.0.5",
     "suitcss-base": "^2.0.0"
   }

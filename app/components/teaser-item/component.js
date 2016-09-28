@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
-const {Component, inject, on, $} = Ember;
+const {Component, $} = Ember;
 
 export default Component.extend({
 	didRender() {
@@ -13,13 +13,13 @@ export default Component.extend({
 					<span></span>
 				</figure>
 			</a>`);
-		};
+		}
 
 		const anchors = document.getElementsByClassName("Teaser-wrap");
 		const lastAnchor = anchors[(anchors.length - 1)];
 
 		const $text = showMoreLess();
 
-		$($text).insertAfter(lastAnchor)
+		$($text).insertAfter(lastAnchor);
 	}
 });

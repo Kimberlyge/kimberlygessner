@@ -1,4 +1,4 @@
-/* global TimelineMax, TweenMax, Linear, Bounce */
+// global TimelineMax, TweenMax, Linear, Bounce
 // import gsap from 'npm:gsap';
 // import {TweenMax} from 'npm:gsap';
 // import ScrollMagic from 'npm:scrollmagic';
@@ -9,4 +9,5 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+
 });

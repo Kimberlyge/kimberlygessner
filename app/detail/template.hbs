@@ -1,22 +1,20 @@
 {{#link-to 'index' class="Button--back"}}&lsaquo; back{{/link-to}}
 
+{{#scrolling-devices}}
 <div class="Detail Detail--{{{model.slug}}}" style="background-color: {{model.acf.color}}">
-	<div class="Detail-wrap parallax-window" data-parallax="scroll" data-image-src="/assets/images/donut.jpg">
-		{{#scrolling-devices}}
-			<div class="Device Device--mobile lazyload">
+	<div class="Detail-wrap" data-image-src="/assets/images/donut.jpg">
+			<div class="Device Device--mobile">
 				<iframe src="{{{model.acf.url}}}" frameborder="0" scrolling="auto"></iframe>
 			</div>
-		{{/scrolling-devices}}
-		<div class="DetailBody lazyload">
+		<div class="DetailBody">
 			<h2>{{{model.title}}}</h2>
 			<p>{{{model.content}}}</p>
 		</div>
-		{{#scrolling-devices}}
-			<div class="Device Device--tablet lazyload">
+			<div class="Device Device--tablet">
 				<iframe src="{{{model.acf.url}}}" frameborder="0" scrolling="auto"></iframe>
 			</div>
-		{{/scrolling-devices}}
 	</div>
 
 	{{outlet}}
 </div>
+{{/scrolling-devices}}
