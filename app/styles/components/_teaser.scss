@@ -14,16 +14,11 @@
 	padding: 0 rem($space);
 	padding-top: 9.5em;
 
-	// visualy hide scrollbar
-	// margin-right: -13px;
-	// height: 100%;
-	// overflow-y: scroll;
-
 	a:hover,
 	a:active {
 		.Teaser-media {
 			img {
-				// filter: brightness(96%);
+				transition: opacity 0.3s ease-in-out;
 				opacity: 0.8;
 			}
 		}
@@ -32,43 +27,44 @@
 		}
 	}
 
-	// until here
-	a:first-of-type {
-		// margin-top: 8.4em;
-	}
-
 	@media (min-width: 430px)  {
 		padding: 6.5em rem(5) 1em;
-
-		a:first-of-type {
-			// margin-top: 100px;
-		}
 	}
+
 	@media (min-width: 650px) {
 		padding-top: 10em;
 	}
+
 	@media (min-width: $layout-m) {
 		padding-top: 14em;
 	}
 }
+
 .Teaser-wrap {
 	position: relative;
 	flex: 1 100%;
 	margin: rem(5);
 	margin-bottom: 0.8em !important;
+
+	background-color: white;
+	border: 2px solid black;
+
 	@media (min-width: 500px) {
 		flex: 2 40%;
 		margin: rem(8);
 	}
+
 	@media (min-width: $layout-m) {
 		margin-bottom: 2em !important;
 		flex: 30%;
 		max-width: 30%;
 	}
+
 	> div {
 		// transition-delay: 1.5s;
 		// opacity: 0;
 	}
+
 	&.lazyloaded {
 		@include animation-delay(44);
 		// border: 2px solid;
@@ -83,6 +79,7 @@
 	.Link::after {
 		transition: all 0.2s ease-in-out !important;
 	}
+
 	&:hover {
 		.Link {
 			&::after {
@@ -114,33 +111,18 @@ a.Teaser-wrap--last {
 	margin-bottom: 0;
 	overflow: hidden;
 
-	> * {
+	img {
 		width: 100%;
 		height: rem(250);
-		// -webkit-transition: -webkit-filter 1600ms $easing;
-		transition: opacity 150ms $easing;
+
+		transition: opacity 0.3s ease-in-out;
 		@include ratio-inner;
 
-		// filter: brightness(1);
 		backface-visibility: hidden;
 		object-fit: cover;
 	}
 }
-.Teaser-body {
-	overflow: hidden;
-	padding: 15px;
-	margin: 0;
-	background-color: $white;
 
-	img {
-		width: 14px;
-		float: left;
-	}
-	p {
-		font-size: 13px;
-		margin: 0;
-	}
-}
 .Teaser-title {
 	position: relative;
 	text-transform: uppercase;
@@ -151,49 +133,35 @@ a.Teaser-wrap--last {
 		font-size: $font-17;
 	}
 
-	// &::after {
-	// 	content: '';
-	// 	border-bottom: 2px solid;
-	// 	position: absolute;
-	// 	width: rem(60);
-	// 	left: 0;
-	// 	bottom: -10px;
-	// }
-}
-.Teaser-categories {
-	@include flexRow;
-	flex-wrap: wrap;
-	flex: 4;
-	margin-bottom: 0;
-}
-.Teaser-tags {
-	@include flexRow;
-	align-self: baseline;
-	flex: 1;
-	padding-top: rem(2);
-	justify-content: flex-end;
-	margin-bottom: 0;
-
-	li {
-		margin: 0 rem(2);
-	}
-	i {
-		position: relative;
-	}
-	span {
-		font-size: rem(10);
+	&::after {
+		content: '';
+		border-bottom: 2px solid;
 		position: absolute;
-		bottom: -2em;
-		left: -1em;
-		right: -1em;
-		text-align: center;
-		opacity: 0;
-		transition: opacity 0.2s $easing;
+		width: rem(60);
+		left: 0;
+		bottom: -10px;
 	}
-	i:hover {
+}
 
-		span {
-			opacity: 1;
-		}
+.Teaser-body {
+	overflow: hidden;
+	padding: 15px;
+	margin: 0;
+
+	border-top: 2px solid;
+
+	img {
+		width: 14px;
+		float: left;
 	}
+
+	p {
+		font-size: 11px;
+		margin: 0;
+	}
+}
+
+.Teaser-coop {
+	margin-bottom: 2px;
+	font-style: italic;
 }

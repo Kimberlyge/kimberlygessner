@@ -1,31 +1,19 @@
 <div class="Index">
 	<div class="Teaser Container">
-		{{teaser-item}}
+		{{!-- {{teaser-item}} --}}
 		{{#each model as |item|}}
-			{{#link-to 'detail' item class="Teaser-wrap lazyload"}}
-				<div>
-					<figure class="Teaser-media">
-						<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="lazyload" alt="" data-srcset="{{item.acf.thumbnail.sizes.medium}} 320w, {{item.acf.thumbnail.sizes.medium_large}} 1000w">
-					</figure>
-					<div class="Teaser-body">
-						<h2 class="Teaser-title Link">{{item.title}}</h2>
-						<ul class="Teaser-categories">
-							{{!-- {{#each item.categories as |category|}}
-								{{#link-to "index"}}{{category.name}}{{/link-to}}
-							{{/each}} --}}
-							<p>{{{item.acf.tools}}}</p>
-						</ul>
-						{{!-- <ul class="Teaser-tags">
-							{{#each item.tags as |tag|}}
-								<li>
-									<i class="icon-{{tag.name}}" data-grunticon-embed><span>{{tag.slug}}</span></i>
-								</li>
-							{{/each}}
-						</ul> --}}
-
-					</div>
+{{!-- 			{{#link-to 'detail' item class="Teaser-wrap lazyload"}}
+			{{/link-to}} --}}
+			<a href="{{item.acf.url}}" target="blank" class="Teaser-wrap lazyload">
+				<figure class="Teaser-media">
+					<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="lazyload" alt="" data-srcset="{{item.acf.thumbnail.sizes.medium}} 320w, {{item.acf.thumbnail.sizes.medium_large}} 1000w">
+				</figure>
+				<div class="Teaser-body">
+					<h2 class="Teaser-title Link">{{item.title}}</h2>
+					<p class="Teaser-coop">{{{item.acf.cooperation}}}</p>
+					<p class="Teaser-technologies">{{{item.acf.tools}}}</p>
 				</div>
-			{{/link-to}}
+			</a>
 		{{/each}}
 	</div>
 </div>

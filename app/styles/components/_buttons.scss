@@ -29,11 +29,11 @@ button {
 	position: fixed;
 	z-index: 2;
 	bottom: rem(10);
-	left: rem(10);
-
+	right: rem(10);
+	text-align: right;
 
 	@media (min-width: $layout-m) {
-		left: rem($space);
+		right: rem($space);
 		top: rem(15);
 		bottom: inherit;
 	}
