@@ -2,11 +2,6 @@
  * Teaser
  **/
 
-// iframe {
-// 	scroll-behavior: smooth;
-//     overflow: scroll;
-// }
-
 .Teaser {
 	display: flex;
 	flex-flow: row wrap;
@@ -47,7 +42,7 @@
 	margin-bottom: 0.8em !important;
 
 	background-color: white;
-	border: 2px solid black;
+	// border: 1px solid black;
 
 	@media (min-width: 500px) {
 		flex: 2 40%;
@@ -60,20 +55,8 @@
 		max-width: 30%;
 	}
 
-	> div {
-		// transition-delay: 1.5s;
-		// opacity: 0;
-	}
-
 	&.lazyloaded {
 		@include animation-delay(44);
-		// border: 2px solid;
-		// padding: 1.5em;
-		// height: rem(241);
-		> div {
-			// @include animation-delay(4);
-			// opacity: 1;
-		}
 	}
 
 	.Link::after {
@@ -86,23 +69,6 @@
 				width: rem(100);
 			}
 		}
-	}
-}
-
-a.Teaser-wrap--last {
-	border: 2px solid $black;
-	padding: rem(15);
-
-	position: relative;
-
-	span {
-		opacity: 0;
-		border: 2px solid $black;
-	}
-
-	> div {
-		position: absolute;
-		bottom: 0.5em;
 	}
 }
 
@@ -148,7 +114,7 @@ a.Teaser-wrap--last {
 	padding: 15px;
 	margin: 0;
 
-	border-top: 2px solid;
+	// border-top: 2px solid;
 
 	img {
 		width: 14px;
@@ -164,4 +130,31 @@ a.Teaser-wrap--last {
 .Teaser-coop {
 	margin-bottom: 2px;
 	font-style: italic;
+}
+
+
+a.Teaser-wrap--last {
+	position: relative;
+	padding: rem(15);
+
+	// border: 1px solid $black;
+
+	.Teaser-media {
+		width: 90%;
+		margin: 5% auto;
+
+		@media (min-width: $layout-m) {
+			background: $bg-color;
+		}
+	}
+
+	.Teaser-body {
+		position: absolute!important;
+		bottom: rem(20);
+		border: 0;
+
+		@media (min-width: $layout-m) {
+			bottom: rem(42);
+		}
+	}
 }

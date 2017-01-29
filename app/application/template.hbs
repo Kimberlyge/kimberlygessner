@@ -1,11 +1,5 @@
 {{nav-main}}
-<div class="Nav {{if layout.onIndex 'is-hidden'}} {{if layout.onAbout 'is-hidden'}}">
-	{{#each model as |item|}}
-		{{#link-to 'detail' item class="Nav-item"}}
-			<span></span>
-		{{/link-to}}
-	{{/each}}
-</div>
+
 <main class="App-main {{if layout.onDetail 'on-detail'}}">
 	{{!-- don't move the outlet without changing liquid.scss --}}
 	{{liquid-outlet}}

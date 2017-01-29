@@ -3,9 +3,11 @@
  */
 
 .About {
-	padding: rem(110) rem(20);
 	@include allCentered;
+
+	padding: rem(110) rem(20);
 	text-align: center;
+	line-height: 1.6;
 
 	@media (min-width: $layout-m) {
 		padding: rem(60) rem($space);
@@ -13,18 +15,28 @@
 }
 
 .AboutNav {
-	position: fixed;
+	position: absolute;
 	bottom: rem($space);
 	left: 0;
 	right: 0;
 	text-align: center;
+}
 
-	a {
-		margin: 0 rem(5);
-		transition: opacity 0.2s $easing;
+.AboutNav-item {
+	display: inline-block;
+	padding: 0 rem(5);
 
-		&:hover {
-			opacity: 0.15;
+	vertical-align: middle;
+
+
+	svg {
+		width: 25px;
+		transition: fill 0.3s $easing;
+	}
+
+	&:hover {
+		svg {
+			fill: $yellow;
 		}
 	}
 }

@@ -2,44 +2,45 @@ a.Logo {
 	position: fixed;
 	left: 0;
 	right: 0;
-	width: 100%;
-	padding: 1em 0;
+	width: 78%;
+	padding: 1em;
+	margin: 10% auto;
+	margin-right: 11%;
+
+	font-style: initial;
+
 	background-color: $white;
 
 	@media (min-width: 656px) {
 		max-width: rem(400);
-		padding: 0;
-		background-color: transparent;
+		padding: rem($space);
 		margin: 3.5em auto 2em;
 	}
 
 	h1 {
-		margin-bottom: 0.1em;
-	}
-
-	h3 {
-		@extend %font-medium;
 		margin-bottom: 0;
-		background-color: $white;
-		padding: 1em;
 		margin: auto;
 
-		@media (max-width: $layout-m) {
-			line-height: 1.8em;
-		}
+		line-height: 1.8;
+		font-size: 11px;
+
+		background-color: $white;
 
 		@media (min-width: $layout-m) {
-			padding: rem($space);
 			max-width: rem(350);
+			font-size: 1rem;
 		}
 	}
+
 	.Link::after {
 		bottom: -2px;
 
 	}
+
 	span {
 		transition: color 0.2s $easing;
 	}
+
 	&:hover {
 		span {
 			color: $yellow;

@@ -5,36 +5,18 @@
 	letter-spacing: .1em;
 	text-decoration: none;
 }
-.NonBtn {
-	background-color: transparent;
-	border: 0;
-	padding: 0;
-	&:active,
-	&:focus {
-		outline: none;
-	}
-}
-.Button--outline {
-	background-image: none;
-	background-color: $white;
-	color: $black !important;
-	border: 3px solid $black;
-	box-shadow: 6px 6px 0 0 $black;
-}
-button {
-	color: $black;
-}
 
 .Button--back {
 	position: fixed;
 	z-index: 2;
-	bottom: rem(10);
+	top: rem(5);
 	right: rem(10);
+	font-size: 12px;
+
 	text-align: right;
 
 	@media (min-width: $layout-m) {
 		right: rem($space);
 		top: rem(15);
-		bottom: inherit;
 	}
 }
