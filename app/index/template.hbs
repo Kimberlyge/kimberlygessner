@@ -1,4 +1,7 @@
 <div class="Index">
+	{{#each model as |item|}}
+		<p>{{item.title}}</p>
+	{{/each}}
 	<div class="Teaser Container">
 		{{#each model as |item|}}
 {{!-- 			{{#link-to 'detail' item class="Teaser-wrap lazyload"}}

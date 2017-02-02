@@ -8,7 +8,7 @@ const Router = Ember.Router.extend(googlePageview, {
 
 Router.map(function () {
   this.route('index', {path: '/'});
-  this.route('detail', {path: '/detail/:slug'});
+  // this.route('detail', {path: '/detail/:slug'});
   this.route('about', {path: 'about'});
 
   this.route('404', {path: '/*wildcard'});
