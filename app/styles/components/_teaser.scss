@@ -42,7 +42,13 @@
 	margin-bottom: 0.8em !important;
 
 	background-color: white;
-	// border: 1px solid black;
+
+	transition: opacity 0.5s ease-in-out;
+	opacity: 0;
+
+	&.lazyloaded {
+		opacity: 1;
+	}
 
 	@media (min-width: 500px) {
 		flex: 2 40%;
@@ -55,21 +61,25 @@
 		max-width: 30%;
 	}
 
-	&.lazyloaded {
-		@include animation-delay(44);
-	}
-
-	.Link::after {
-		transition: all 0.2s ease-in-out !important;
-	}
 
 	&:hover {
-		.Link {
+		.Teaser-link {
 			&::after {
 				width: rem(100);
 			}
 		}
 	}
+
+}
+
+.Teaser-link::after {
+	content: '';
+	border-bottom: 2px solid;
+	position: absolute;
+	width: rem(60);
+	left: 0;
+	bottom: -10px;
+	transition: all 0.2s ease-in-out !important;
 }
 
 .Teaser-media {
@@ -81,11 +91,18 @@
 		width: 100%;
 		height: rem(250);
 
-		transition: opacity 0.3s ease-in-out;
 		@include ratio-inner;
 
 		backface-visibility: hidden;
 		object-fit: cover;
+
+		transition: opacity 0.5s ease-in-out;
+		opacity: 0;
+
+		&.lazyloaded {
+			opacity: 1;
+		}
+
 	}
 }
 
@@ -98,23 +115,12 @@
 	@media (min-width: $layout-ml) {
 		font-size: $font-17;
 	}
-
-	&::after {
-		content: '';
-		border-bottom: 2px solid;
-		position: absolute;
-		width: rem(60);
-		left: 0;
-		bottom: -10px;
-	}
 }
 
 .Teaser-body {
 	overflow: hidden;
 	padding: 15px;
 	margin: 0;
-
-	// border-top: 2px solid;
 
 	img {
 		width: 14px;
@@ -132,23 +138,17 @@
 	font-style: italic;
 }
 
-
 a.Teaser-wrap--last {
 	position: relative;
 	padding: rem(15);
-
-	// border: 1px solid $black;
 
 	.Teaser-media {
 		width: 90%;
 		margin: 5% auto;
 
-		// @media (min-width: $layout-m) {
-		// 	background: $bg-color;
-		// }
 	}
 
-	.Teaser-body {
+	.Teaser-link {
 		position: absolute!important;
 		bottom: rem(20);
 		border: 0;

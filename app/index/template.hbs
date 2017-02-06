@@ -8,7 +8,7 @@
 					<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="lazyload" alt="" data-srcset="{{item.acf.thumbnail.sizes.medium}} 320w, {{item.acf.thumbnail.sizes.medium_large}} 1000w">
 				</figure>
 				<div class="Teaser-body">
-					<h2 class="Teaser-title Link">{{item.title}}</h2>
+					<h2 class="Teaser-title Teaser-link">{{item.title}}</h2>
 					<p class="Teaser-coop">{{{item.acf.cooperation}}}</p>
 					<p class="Teaser-technologies">{{{item.acf.tools}}}</p>
 				</div>
@@ -16,9 +16,7 @@
 		{{/each}}
 		<a href="mailto:mail@kimberlygessner.com" class="Teaser-wrap Teaser-wrap--last lazyload">
 			<figure class="Teaser-media"></figure>
-			<div class="Teaser-body">
-				<p class="Link">More projects on request.</p>
-			</div>
+			<p class="Teaser-link">More projects on request.</p>
 		</a>
 	</div>
 </div>
